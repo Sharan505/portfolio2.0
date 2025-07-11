@@ -4,10 +4,6 @@ function Contact() {
   const [formStatus, setFormStatus] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    // AOS init would go here
-  }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -52,7 +48,7 @@ function Contact() {
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12" data-aos="fade-down">
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold pb-4 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 bg-clip-text text-transparent animate-fade-in">
             Contact Me
           </h2>
           <div className="w-24 h-1 mt-3 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
@@ -84,7 +80,7 @@ function Contact() {
 
           {/* Content */}
           <form
-            action="https://formspree.io/f/xovwgvwv" // Replace with your actual Formspree ID
+            action="https://formspree.io/f/xovwgvwv"
             method="POST"
             onSubmit={handleSubmit}
             className="relative z-10 space-y-6"

@@ -1,5 +1,5 @@
 import React from "react";
-import { Code, Trophy, Star, ExternalLink, Zap } from "lucide-react";
+import { Code, Trophy, Cloud, ExternalLink, Zap } from "lucide-react";
 import reactLogo from "../assets/react.svg";
 import jsLogo from "../assets/Skills/js.svg";
 import nodeLogo from "../assets/Skills/nodejs.svg";
@@ -96,6 +96,14 @@ function Skills() {
       link: "https://hackerrank.com/profile/sharan27505",
       description: "Data structures and competitive programming",
     },
+    {
+      name: "Google Cloud",
+      icon: Cloud,
+      bgColor: "from-blue-500 to-blue-900",
+      stats: { badges: "10", league: "Gold", points: "17K+" },
+      link: "https://www.cloudskillsboost.google/public_profiles/598a6f61-42c8-4148-870f-c1884e8f7ff3",
+      description: "Google Cloud Skills Boost platform for learning GCP",
+    },
   ];
 
   return (
@@ -110,121 +118,116 @@ function Skills() {
         <div className="absolute bottom-20 left-40 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000"></div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-12">
-        <div className="col-span-2"></div>
-        <div className="col-span-8 px-4">
-          {/* Section Title */}
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold pb-4 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 bg-clip-text text-transparent animate-fade-in">
-              Skills & Learnings
-            </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full animate-fade-in-delay"></div>
-            <p className="text-gray-400 mt-4 text-lg animate-fade-in-delay-2">
-              Constantly evolving and learning new technologies
-            </p>
-          </div>
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        {/* Section Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold pb-4 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 bg-clip-text text-transparent animate-fade-in">
+            Skills & Learnings
+          </h2>
+          <div className="w-32 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full animate-fade-in-delay"></div>
+          <p className="text-gray-400 mt-4 text-base sm:text-lg animate-fade-in-delay-2">
+            Constantly evolving and learning new technologies
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Coding Platforms */}
-            <div className="space-y-8">
-              {platforms.map((platform, index) => (
-                <div
-                  key={platform.name}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 group hover:scale-105 hover:shadow-2xl"
-                  data-aos="fade-right"
-                  data-aos-delay={index * 100}
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div
-                      className={`p-3 rounded-xl bg-gradient-to-r ${platform.bgColor} shadow-lg`}
-                    >
-                      <platform.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
-                        {platform.name}
-                      </h3>
-                      <p className="text-gray-400 text-sm">
-                        {platform.description}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-4 mb-4">
-                    {Object.entries(platform.stats).map(([key, value]) => (
-                      <div key={key} className="text-center">
-                        <div className="text-lg font-bold text-indigo-400">
-                          {value}
-                        </div>
-                        <div className="text-xs text-gray-500 capitalize">
-                          {key}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <a
-                    href={platform.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors group-hover:underline"
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12">
+          {/* Coding Platforms */}
+          <div className="space-y-6 sm:space-y-8">
+            {platforms.map((platform, index) => (
+              <div
+                key={platform.name}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 group hover:scale-105 hover:shadow-2xl"
+                data-aos="fade-right"
+                data-aos-delay={index * 100}
+              >
+                <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                  <div
+                    className={`p-2 sm:p-3 rounded-xl bg-gradient-to-r ${platform.bgColor} shadow-lg`}
                   >
-                    <ExternalLink className="w-4 h-4" />
-                    <span>View Profile</span>
-                  </a>
-                </div>
-              ))}
-            </div>
-
-            {/* Skills Cards */}
-            <div className="relative">
-              <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 h-full">
-                <div className="flex items-center gap-3 mb-6">
-                  <Zap className="w-6 h-6 text-indigo-400" />
-                  <h3 className="text-2xl font-bold text-white">Tech Stack</h3>
+                    <platform.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+                      {platform.name}
+                    </h3>
+                    <p className="text-gray-400 text-xs sm:text-sm">
+                      {platform.description}
+                    </p>
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  {skillBubbles.map((skill, index) => (
-                    <div
-                      key={skill.name}
-                      className="group bg-gray-700/30 hover:bg-gray-700/50 rounded-xl p-4 border border-gray-600/30 hover:border-gray-500/50 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg animate-fade-in"
-                      data-aos="fade-down"
-                      data-aos-delay={index * 100}
-                    >
-                      <div className="flex items-center gap-3">
-                        <div
-                          className={`w-12 h-12 rounded-lg bg-gradient-to-br ${skill.color} flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300`}
-                        >
-                          <img className="w-8 h-8" src={skill.icon} alt="" />
-                          {/* <span className="text-xl">{skill.icon}</span> */}
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="text-white font-semibold text-sm group-hover:text-indigo-300 transition-colors">
-                            {skill.name}
-                          </h4>
-                          <div className="w-full bg-gray-600/50 rounded-full h-1 mt-2">
-                            <div
-                              className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
-                              style={{
-                                width: `${skill.level}%`,
-                                animationDelay: `${index * 0.1 + 0.5}s`,
-                              }}
-                            />
-                          </div>
-                        </div>
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4">
+                  {Object.entries(platform.stats).map(([key, value]) => (
+                    <div key={key} className="text-center">
+                      <div className="text-sm sm:text-lg font-bold text-indigo-400">
+                        {value}
+                      </div>
+                      <div className="text-xs text-gray-500 capitalize">
+                        {key}
                       </div>
                     </div>
                   ))}
                 </div>
+
+                <a
+                  href={platform.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors group-hover:underline text-sm sm:text-base"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>View Profile</span>
+                </a>
+              </div>
+            ))}
+          </div>
+
+          {/* Skills Cards */}
+          <div className="relative">
+            <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-700/50 h-full">
+              <div className="flex items-center gap-3 mb-6">
+                <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-400" />
+                <h3 className="text-xl sm:text-2xl font-bold text-white">Tech Stack</h3>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                {skillBubbles.map((skill, index) => (
+                  <div
+                    key={skill.name}
+                    className="group bg-gray-700/30 hover:bg-gray-700/50 rounded-xl p-3 sm:p-4 border border-gray-600/30 hover:border-gray-500/50 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg animate-fade-in"
+                    data-aos="fade-down"
+                    data-aos-delay={index * 100}
+                  >
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <div
+                        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br ${skill.color} flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300`}
+                      >
+                        <img className="w-6 h-6 sm:w-8 sm:h-8" src={skill.icon} alt="" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-white font-semibold text-sm sm:text-base group-hover:text-indigo-300 transition-colors truncate">
+                          {skill.name}
+                        </h4>
+                        <div className="w-full bg-gray-600/50 rounded-full h-1 mt-2">
+                          <div
+                            className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
+                            style={{
+                              width: `${skill.level}%`,
+                              animationDelay: `${index * 0.1 + 0.5}s`,
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
-        <div className="col-span-2"></div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in {
           from {
             opacity: 0;

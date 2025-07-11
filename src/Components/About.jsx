@@ -33,7 +33,7 @@ function About() {
   return (
     <section id="about">
       {/* Wave divider */}
-      <div className="bg-gray-900 relative">
+      {/* <div className="bg-gray-900 relative">
         <svg
           className="w-full h-20 transform rotate-180"
           viewBox="0 0 1200 120"
@@ -44,7 +44,7 @@ function About() {
             fill="rgb(17 24 39)"
           ></path>
         </svg>
-      </div>
+      </div> */}
 
       <div className="relative bg-gray-900 overflow-hidden">
         {/* Animated background pattern */}
@@ -121,7 +121,7 @@ function About() {
         {/* Content */}
         <div className="relative z-10 grid grid-cols-12 py-20 min-h-screen">
           <div className="col-span-2"></div>
-          <div className="col-span-8 flex flex-col items-center justify-center px-4">
+          <div className="md:col-span-8 col-span-12 flex flex-col items-center justify-center px-4">
             {/* Section Title */}
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 bg-clip-text text-transparent animate-fade-in">
@@ -145,7 +145,7 @@ function About() {
                       2+ years
                     </span>{" "}
                     of hands-on experience in{" "}
-                    <span className="text-purple-400 font-semibold">
+                    <span className="text-indigo-400 font-semibold">
                       Fullstack Web development
                     </span>
                     . Skilled in designing and building user-friendly
@@ -221,7 +221,7 @@ function About() {
         </svg>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in {
           from {
             opacity: 0;

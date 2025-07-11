@@ -12,10 +12,10 @@ const CreativeAnimatedCursor = () => {
     const handleMouseMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
 
-      // Add trail point
+      // Add trail point with a truly unique ID
       setTrailPoints((prev) => [
-        ...prev.slice(-8), // Keep only last 8 points
-        { x: e.clientX, y: e.clientY, id: Date.now() },
+        ...prev.slice(-8),
+        { x: e.clientX, y: e.clientY, id: Date.now() + Math.random() },
       ]);
     };
 
@@ -185,7 +185,7 @@ const CreativeAnimatedCursor = () => {
         />
       ))} */}
 
-      <style jsx>{`
+      <style>{`
         @keyframes pulse {
           0%,
           100% {

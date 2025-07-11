@@ -2,17 +2,6 @@ import React, { useEffect } from "react";
 
 function ProjectsSection() {
   const [hoveredProject, setHoveredProject] = React.useState(null);
-
-  useEffect(() => {
-    // AOS initialization would go here
-    // AOS.init({
-    //   duration: 800,
-    //   offset: 120,
-    //   easing: "ease-in-out",
-    //   once: true,
-    // });
-  }, []);
-
   const projects = [
     {
       id: 1,
@@ -133,7 +122,7 @@ function ProjectsSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold pb-4 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold pb-4 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 bg-clip-text text-transparent animate-fade-in">
             Projects
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>

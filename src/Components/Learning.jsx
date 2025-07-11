@@ -5,7 +5,6 @@ import {
   Code,
   Globe,
   Database,
-  Settings,
   Target,
   Play,
   Pause,
@@ -151,7 +150,7 @@ function Learning() {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center">
-            <h2 className="text-5xl font-bold bg-gradient-to-r pb-8 from-indigo-200 via-purple-200 to-pink-200 bg-clip-text text-transparent z-10">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold pb-4 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 bg-clip-text text-transparent animate-fade-in">
               Learning Journey
             </h2>
           </div>
@@ -194,7 +193,7 @@ function Learning() {
         {/* Study Method Section */}
         <div>
           <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            How I Learn
+            You know how I learn?..
           </h3>
           <p className="text-gray-300 text-lg mb-12 text-center max-w-4xl mx-auto leading-relaxed">
             I believe in a multi-faceted approach combining theoretical
@@ -281,7 +280,7 @@ function Learning() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%,
           100% {

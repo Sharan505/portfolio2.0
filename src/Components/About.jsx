@@ -7,25 +7,25 @@ function About() {
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:your.email@example.com",
+      href: "mailto:sharan27505@gmail.com",
       color: "hover:text-red-400",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/yourprofile",
+      href: "https://linkedin.com/in/sharan-muthuraja",
       color: "hover:text-blue-400",
     },
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/yourprofile",
+      href: "https://github.com/Sharan505",
       color: "hover:text-gray-300",
     },
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      href: "https://wa.me/yourphonenumber",
+      href: "https://wa.me/7540008788",
       color: "hover:text-green-400",
     },
   ];
